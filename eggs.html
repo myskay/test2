@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>砸金蛋</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=0">
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/zajindan/css/initialize.css"/>
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/zajindan/css/goldegg.css"/>
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/zajindan/css/swiper-3.4.2.min.css"/>
+		<script src="__PUBLIC__/zajindan/js/jquery-2.2.3.js"></script>
+		<script src="__PUBLIC__/zajindan/js/swiper-3.4.2.jquery.min.js"></script>
+	</head>
+	<body>
+		<div class="goldContent">
+			<div class="goldHead">
+				<a class="jilu" href="__CONTROLLER__/eggs_record/userid/{$user_arr.user_id}">中奖纪录</a>
+				<img src="__PUBLIC__/zajindan/img/bg1.jpg" class="stage"/>
+			    <div class="eggList">
+				  <div class="dd" id="1">
+					<img src="__PUBLIC__/zajindan/img/left.png" />
+				  </div>
+				  <div class="dd" id="2">
+					<img src="__PUBLIC__/zajindan/img/zhongjian.png" />
+				  </div>
+				  <div class="dd" id="3">
+					<img src="__PUBLIC__/zajindan/img/right.png" />
+				  </div>
+			   </div>
+			   <div class="zds">
+			   	<img src="__PUBLIC__/zajindan/img/chuizi.png" />
+			   </div>
+			</div>
+            <div class="goldAward">
+		    	<img src="__PUBLIC__/zajindan/img/bg4.png" class="awardBg"/>
+		    	<div class="goldAward_inner">
+		    		<div class="title-ano">
+		    			<img src="__PUBLIC__/zajindan/img/biaotikuang.png" />
+		    			<p>获奖名单</p>
+		    		</div>
+		    		<div class="hj_list  ">
+		    		   <div class="list_inner ">
+		    		   	<foreach name="eggslog_arr" item="v">
+		    		   		<div class="list_item ">
+	                               <p class="time">{$v.eggslog_createtime|date='Y-m-d',###}</p>
+	                               <p class="name">{$v.user_nickname}</p>
+	                               <p class="prize">{$v.eggslog_name}</p>
+                            </div>
+		    		   </foreach>
+		    		   </div>
+		    		</div>
+		    	</div>
+		    </div>
+		    <div class="goldAward">
+		    	<img src="__PUBLIC__/zajindan/img/bg2.png" class="awardBg"/>
+		    	<div class="goldAward_inner">
+		    		<div class="title-ano">
+		    			<img src="__PUBLIC__/zajindan/img/biaotikuang.png" />
+		    			<p>奖品设置</p>
+		    		</div>
+		    		<div class="swiper-container amardList ">
+		    			<div class="swiper-wrapper">
+		    			  <div class=" swiper-slide">
+		    				<img src="__PUBLIC__/zajindan/img/iPhone.png" />
+		    				<p>iPhone7</p>
+		    			  </div>
+		    			  <div class=" swiper-slide">
+		    				<img src="__PUBLIC__/zajindan/img/hongbao.png" />
+		    				<p>大红包</p>
+		    			  </div>
+		    			  <div class="swiper-slide">
+		    				<img src="__PUBLIC__/zajindan/img/jifen.png" />
+		    				<p>积分</p>
+		    			  </div>
+		    			  <div class="swiper-slide">
+		    				<img src="__PUBLIC__/zajindan/img/jifen.png" />
+		    				<p>积分</p>
+		    			  </div>
+		    			  <div class="swiper-slide">
+		    				<img src="__PUBLIC__/zajindan/img/jifen.png" />
+		    				<p>积分</p>
+		    			  </div>
+		    		</div>
+		    		</div>
+		    	</div>
+		    </div>
+            <div class="goldAward">
+		    	<img src="__PUBLIC__/zajindan/img/bg3.png" class="awardBg"/>
+		    	<div class="goldAward_inner">
+		    		<div class="title-ano">
+		    			<img src="__PUBLIC__/zajindan/img/biaotikuang.png" />
+		    			<p>活动规则</p>
+		    		</div>
+		    		<div class="rule">
+		    			<ul>
+		    			   <li>1.每日按时砸金蛋可获得礼品</li>
+		    			   <li>2.在规定时间内连续完成签到可获得礼品</li>
+		    			   <li>3.每日按时砸金蛋可获得礼品</li>
+		    			   <li>4.每日按时砸金蛋可获得礼品</li>
+		    			   <li>5.每日按时砸金蛋可获得礼品</li>
+		    		    </ul>
+		    		</div>
+		    	</div>
+		    </div>
+
+            <!--无实物弹框-->
+            <div class="overlay-dialog ">
+            	<div class="dialog">
+			       <div class="close-wra">
+				     <img src="__PUBLIC__/zajindan/img/guanbianniu-.png" class="close">
+			       </div>
+			       <div class="dialog-pic">
+				      <div class="pic">
+				         <img src="__PUBLIC__/zajindan/img/lipinhongbao-.png">
+			          </div>
+			       </div>
+			       <div class="prize">
+				      <p>哇，您获得<span>200积分</span></p>
+			       </div>
+			       <div class="prize-anniu">
+				      <div>
+					    <img src="__PUBLIC__/zajindan/img/lijishiy.png" class="close"/>
+				      </div>
+			      </div>
+		      </div>
+            </div>
+            <!--无实物弹框结束-->
+            <!--实物弹框-->
+            <div class="overlay-dialog-two scroll">
+		       <div class="dialog-two">
+		       	 <div class="close-wra">
+					   <img src="__PUBLIC__/zajindan/img/guanbianniu-.png"  class="close">
+				    </div>
+			     <div class="dialog-two-main">
+				    <div class="inner">
+					  <div class="gongxi">
+					  	<img src="__PUBLIC__/zajindan/img/gongxi.png" />
+					  </div>
+					  <div class="huode">
+					  	<img src="__PUBLIC__/zajindan/img/gongxihuode.png" />
+					  </div>
+					  <p class="prize">iPhone 7Plus 128G 手机一部</p>
+					  <p class="beizhu">备注:请登记您的信息，我们将在24小时之内与你联系兑奖事宜，请注意保持手机畅通。</p>
+					  <form method="post" action="">
+						<div class="name-wrapper">
+							<div class="name">
+						        <span>姓名 :</span>
+						        <input type="text" placeholder="例如张三" id="name">
+						    </div>
+						</div>
+						<div class="name-wrapper">
+							<div class="name">
+						        <span>手机号:</span>
+						        <input type="text" placeholder="例如15201047740">
+						    </div>
+						</div>
+						<div class="name-wrapper">
+							<div class="address">
+						        <p>收件人地址:</p>
+						        <!--<input type="text" placeholder="例如北京市上地三街" value="100%">-->
+						        <textarea cols="3" name="text" placeholder="例如北京市上地三街"></textarea>
+							</div>
+						</div>
+						<div class="name-wrapper tijiao">
+							<input type="submit" value="提交">
+						</div>
+					</form>
+				  </div>
+			   </div>
+		    </div>
+	    </div>
+            <!--实物弹框结束-->
+		    <!--谢谢参与弹框-->
+		    <div class="overlay-thank">
+		    	<div class="thankContent">
+		    		<div class="thankinner">
+		    			<img src="__PUBLIC__/zajindan/img/bg233.png" class="thank_bg"/>
+		    			<div class="thankAnniu">
+		    				<img src="__PUBLIC__/zajindan/img/anniu-.png" class="close"/>
+		    			</div>
+		    		</div>
+		    	</div>
+		    </div>
+		    <!--谢谢参与弹框结束-->
+		    <script>
+		    	var swiper = new Swiper('.amardList', {
+                   slidesPerView: 3,
+                   spaceBetween: 24,
+                   autoplay:1000,
+                   loop:true,
+                   autoplayDisableOnInteraction : false,
+               });
+
+	             function autoScroll(obj){
+			         $(obj).find($(".list_inner")).animate({
+				        marginTop : "-20px"
+			         },500,function(){
+				     $(this).css({marginTop : "0px"}).find($(".list_item").eq(0)).appendTo(this);
+			      })
+		        }
+		         $(function(){
+		         	    // 图片加载完成之后替换
+				   setTimeout(function(){
+					  var imgurl = '__PUBLIC__/zajindan/img/bg1.png';
+					  var imgObject = new Image();
+					  imgObject.src = imgurl;
+					  imgObject.onload = function(){
+						  $(".stage").attr('src',imgurl);
+					   }
+				      },1000)
+//				     获奖名单
+			           setInterval('autoScroll(".hj_list")',1000);
+			           var winheight = $(window).height();
+			           $(window).resize(function(){
+			           	var thisheight = $(this).height();
+			           	if(winheight - thisheight>50){
+			           		var scrolltop = -$("#name").offset().top+200;
+					             $(".dialog-two-main").css({
+						              'margin-top':scrolltop,
+					             });
+			           	   }else{
+			           	   	   $(".dialog-two-main").css({
+			           	   	   	  'margin-top':'0px',
+			           	   	   })
+			           	   }
+			           })
+		          })
+
+
+		    </script>
+		    <script >
+                $(function(){
+	           var isture = 0;
+           	 $(".dd").on("click",function(){
+           	 	var eggid = $(this).attr("id");
+           	 	eggClick($(this),eggid);
+           	 });
+           	 function eggClick(obj,eggid){
+           	 	if(isture) return;
+           	 	isture = true;
+              var token = "{$Think.get.token}";
+                  $.post('__CONTROLLER__/eggs_data',{'token':token},function(t){
+                    if(t.status == 1){
+                      $(".zds").animate({
+                         "top":obj.position().top+170,
+                         "left":obj.position().left+125
+                       },30,function(){
+                           if (t.data.dialog_type == 1) {
+                               isture = false;
+                               $(".overlay-dialog").show();
+                               $(".prize span").html(t.data.prize_name);
+                                $(document).on("touchmove",function(e){
+                                      e.preventDefault();
+                                 })
+                               $(".close").on("click",function(){
+                                       $(".overlay-dialog").hide();
+                                       $(document).unbind("touchmove");
+                                 })
+                           }else if (t.data.dialog_type == 2) {
+                               isture = false;
+                                $(".overlay-dialog-two").show();
+                                 $("body").addClass("modal-open");
+                                $(".close").on("click",function(){
+                                       $(".overlay-dialog-two").hide();
+                                        $("body").removeClass("modal-open");
+                                 })
+                          }else if (t.data.dialog_type == 3) {
+                                 isture = false;
+                               $(".overlay-thank").show();
+                                $(document).on("touchmove",function(e){
+                                      e.preventDefault();
+                                 })
+                               $(".close").on("click",function(){
+                                       $(".overlay-thank").hide();
+                                       $(document).unbind("touchmove");
+                                 })
+                          };
+                       });
+
+                 }else{
+                    alert(t.msg);
+                     return false;
+                 }
+               },'json');
+           	 }
+          })
+		    </script>
+		</div>
+	</body>
+</html>
