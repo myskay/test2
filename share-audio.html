@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>音频分享</title>
+		<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"> 
+		<link rel="stylesheet" type="text/css" href="css/initialize.css"/>
+		<link rel="stylesheet" type="text/css" href="css/share-audio.css"/>
+		<script src="js/yinpin.js"></script>
+		<script src="js/jquery-2.2.3.js"></script>
+	</head>
+	<body>
+		<div class="main">
+			<div class="inner">
+			   <img src="img/字1@2x.png" class="h2"/>
+			   <div class="main-content">
+			     <div class="top">
+			     	<img src="img/头像@2x.png"/>
+			     	<span>白衣少年</span>
+			     </div>
+			     <p class="fir">桃花源记</p>
+			     <p class="sec"><span>唐代</span>:<span>李白</span></p>
+			     <!--音乐播放器进度条-->
+			     <audio src="music/徐佳莹 - 浪费.mp3" id="audio"></audio>
+		         <div class="progress-wrapper">
+		         	<div class="progressPar" id="musicAudioProgressPar">
+			           <div class="progress" id="musicAudioProgress">
+				           <i class="yuandian" id="pro-yuan"></i>
+			           </div>
+		            </div>
+		         </div>
+		        <!--音乐播放器进度条结束-->
+		        <span class="thr" id="currentTime">00:00</span>
+		        <span class="thr floatright" id="totalTime"></span>
+		        <div class="anniu-jihe">
+			         <a><img src="img/play_btn_v1@2x.png" id="PlayAndPause"/></a>
+		        </div>
+			   </div>
+			   <p class="ptext">第一次朗读古文,谢谢大家多多支持谢谢</p>
+			   <p class="btn"><a href="H5register.html"><button>去注册点赞支持</button></a></p>
+			</div>
+		</div>
+		<script>
+			$(function(){
+				var windowHeight = $(window).height();
+				$("body").height(windowHeight);
+			})
+		</script>
+	</body>
+</html>

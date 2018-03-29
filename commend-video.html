@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>推荐视频</title>
+		<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	    <link rel="stylesheet" type="text/css" href="css/initialize.css"/>
+	    <link rel="stylesheet" type="text/css" href="css/commend-video.css"/>
+	    <link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+	    <script src="js/video.js"></script>
+	    <script src="js/jquery-2.2.3.js"></script>
+	    <script src="js/swiper.min.js"></script>
+	</head>
+	<body>
+		<!--头部-->
+		<header>
+			<a class="logo"><img src="img/LOGO.png" /></a>
+			<div class="header-ps">
+				<a href="#">
+					<span>下载淘保观看</span>
+				</a>
+			</div>
+		</header>
+		<section class="video-sec">
+			<!--<img src="img/视频图片.png" class="video-img"/>-->
+			<video id="myvideo"  class="video-img">
+				<source src="video/Taylor Swift - ... Ready For It？.mp4" type="video/mp4"/>
+			</video>
+			<div class="play" id="playandpause">
+				<a><img src="img/jilinsaiqu-bofang.png"/></a>
+			</div>
+			<!--视频播放器进度条-->
+			<div class="video-progress" id="video-progress">
+				<div class="current-progress" id="played-progress">
+					
+				</div>
+			</div>
+			<!--视频播放器进度条结束-->
+			<!--当前时间与总时间-->
+			<span id="currenttime">0:00</span>
+			<span id="totaltime">22:10</span>
+			<!--当前时间与总时间结束-->
+		</section>
+		<p class="intro">还记得幸福来敲门还记得幸福来敲门还记得幸福来敲门还记得幸福来敲门</p>
+		<div class="bianju"></div>
+		<div class="commend-more">
+			<p>更多推荐</p>
+		</div>
+		<!--手滑视频-->
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<div class="commend-video">
+						<img src="img/fenjirebo-1.png" class="video-img" />
+						<div class="play">
+							<a><img src="img/jilinsaiqu-bofang.png"/></a>
+						</div>
+						<span class="time">03:20</span>
+					</div>
+					<p class="video-intro">还记得幸福来敲门还记得幸福来敲门还记得幸福来敲门还记得幸福来敲门还记得幸福来敲门还记得幸福来敲门还记得幸福来敲门还记得幸福来敲门</p>
+				</div>
+				<div class="swiper-slide">
+					<div class="commend-video">
+						<img src="img/fenjirebo-1.png" class="video-img" />
+						<div class="play">
+							<a><img src="img/jilinsaiqu-bofang.png"/></a>
+						</div>
+						<span class="time">03:20</span>
+					</div>
+					<p class="video-intro">还记得幸福来敲门还记得幸福来敲门还记得幸福来敲门还记得幸福来敲门还记得幸福来敲门还记得幸福来敲门还记得幸福来敲门还记得幸福来敲门</p>
+				</div>
+				<div class="swiper-slide">
+					<div class="commend-video">
+						<img src="img/fenjirebo-1.png" class="video-img" />
+						<div class="play">
+							<a><img src="img/jilinsaiqu-bofang.png"/></a>
+						</div>
+						<span class="time">03:20</span>
+					</div>
+					<p class="video-intro">还记得幸福来敲门还记得幸福来敲门还记得幸福来敲门还记得幸福来敲门还记得幸福来敲门还记得幸福来敲门还记得幸福来敲门还记得幸福来敲门</p>
+				</div>
+				<div class="swiper-slide">
+					<div class="commend-video">
+						<img src="img/fenjirebo-1.png" class="video-img" />
+						<div class="play">
+							<a><img src="img/jilinsaiqu-bofang.png"/></a>
+						</div>
+						<span class="time">03:20</span>
+					</div>
+					<p class="video-intro">还记得幸福来敲门还记得幸福来敲门还记得幸福来敲门还记得幸福来敲门还记得幸福来敲门还记得幸福来敲门还记得幸福来敲门还记得幸福来敲门</p>
+				</div>
+			</div>
+		</div>
+		 <script>
+           var swiper = new Swiper('.swiper-container', {
+                 slidesPerView: 2.5,
+                 spaceBetween: 30,
+                 
+             });
+  </script>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
